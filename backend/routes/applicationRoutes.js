@@ -1,16 +1,19 @@
 const express = require("express");
 const router = express.Router();
 
-const { verifyToken, isAdmin } = require("../middleware/authMiddleware");
-const allocationController = require("../controllers/allocationController");
+const applicationController = require("../controllers/applicationController");
+const { verifyToken, isAdmin, isStudent } = require("../middleware/authMiddleware");
 
-// 🛠️ ADMIN — View all allocations
-router.get("/", verifyToken, isAdmin, allocationController.getAllocations);
+// 👩‍🎓 STUDENT — Apply
+router.post("/", verifyToken, isStudent, applicationController.applyHostel);
 
-// 🛠️ ADMIN — Create allocation manually (optional)
-router.post("/", verifyToken, isAdmin, allocationController.createAllocation);
+// 🛠️ ADMIN — View applications
+router.get("/", verifyToken, isAdmin, applicationController.getApplications);
 
-// 🛠️ ADMIN — Cancel allocation
-router.delete("/:id", verifyToken, isAdmin, allocationController.cancelAllocation);
+// 🛠️ ADMIN — Approve
+router.put("/approve/:id", verifyToken, isAdmin, applicationController.approveApplication);
+
+// 🛠️ ADMIN — Reject
+router.put("/reject/:id", verifyToken, isAdmin, applicationController.rejectApplication);
 
 module.exports = router;

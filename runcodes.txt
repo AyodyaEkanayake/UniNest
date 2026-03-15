@@ -1,2 +1,17 @@
 Ctrl + C
 node server.js
+
+
+
+
+admin token - 
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YTgxMDE5Y2MxNTc3MTg4YTFiMGJhMCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MzE0MDQ5N30.gRTLUUmWlzRPCtGBYiq4udDfCitJKvMWzTPrelZXBXU
+
+student token - 
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YTJiOWM1ZWQxOWI4OGJjNTJkN2EwZCIsInJvbGUiOiJzdHVkZW50IiwiaWF0IjoxNzczMTQwMTExfQ._cbgz7c5aJq3htpVfEpQYb2KVS3gp0ZmS1ZO3AKYg2M
+
+
+
+room - 69a420c663f4dfb6e108c7a3
+            
+student - 69a2b9c5ed19b88bc52d7a0d
