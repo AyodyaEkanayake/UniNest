@@ -1,0 +1,122 @@
+Here is a **complete API Endpoint Table for your UniNest Hostel Management Backend**.
+You can directly use this for your **project report, documentation, or viva**. 🧾
+
+---
+
+# 🏨 UniNest API Endpoint Table
+
+| No | Module       | Method | Endpoint                                    | Access  | Description                             |
+| -- | ------------ | ------ | ------------------------------------------- | ------- | --------------------------------------- |
+| 1  | Auth         | POST   | `/api/auth/register`                        | Public  | Register a new user (student/admin)     |
+| 2  | Auth         | POST   | `/api/auth/login`                           | Public  | Login and receive JWT token             |
+| 3  | Hostels      | POST   | `/api/hostels`                              | Admin   | Create a new hostel                     |
+| 4  | Hostels      | GET    | `/api/hostels`                              | Public  | View all hostels                        |
+| 5  | Hostels      | GET    | `/api/hostels/:id`                          | Public  | View a single hostel                    |
+| 6  | Hostels      | PUT    | `/api/hostels/:id`                          | Admin   | Update hostel details                   |
+| 7  | Hostels      | DELETE | `/api/hostels/:id`                          | Admin   | Delete a hostel                         |
+| 8  | Rooms        | POST   | `/api/rooms`                                | Admin   | Create a new room                       |
+| 9  | Rooms        | GET    | `/api/rooms`                                | Public  | View all rooms                          |
+| 10 | Rooms        | GET    | `/api/rooms/:id`                            | Public  | View a specific room                    |
+| 11 | Rooms        | PUT    | `/api/rooms/:id`                            | Admin   | Update room details                     |
+| 12 | Rooms        | DELETE | `/api/rooms/:id`                            | Admin   | Delete a room                           |
+| 13 | Applications | POST   | `/api/applications`                         | Student | Apply for a hostel                      |
+| 14 | Applications | GET    | `/api/applications`                         | Admin   | View all student applications           |
+| 15 | Applications | GET    | `/api/applications/my`                      | Student | View own application                    |
+| 16 | Allocations  | POST   | `/api/allocations`                          | Admin   | Allocate room to student                |
+| 17 | Allocations  | GET    | `/api/allocations`                          | Admin   | View all room allocations               |
+| 18 | Allocations  | GET    | `/api/allocations/my`                       | Student | View student’s room allocation          |
+| 19 | Allocations  | PUT    | `/api/allocations/request-cancellation`     | Student | Request cancellation of room allocation |
+| 20 | Allocations  | PUT    | `/api/allocations/approve-cancellation/:id` | Admin   | Approve cancellation request            |
+| 21 | Allocations  | DELETE | `/api/allocations/:id`                      | Admin   | Cancel allocation manually              |
+
+---
+
+# 📊 API Module Summary
+
+### 🔐 Authentication APIs
+
+```
+POST /api/auth/register
+POST /api/auth/login
+```
+
+---
+
+### 🏨 Hostel Management APIs
+
+```
+POST /api/hostels
+GET /api/hostels
+GET /api/hostels/:id
+PUT /api/hostels/:id
+DELETE /api/hostels/:id
+```
+
+---
+
+### 🚪 Room Management APIs
+
+```
+POST /api/rooms
+GET /api/rooms
+GET /api/rooms/:id
+PUT /api/rooms/:id
+DELETE /api/rooms/:id
+```
+
+---
+
+### 📝 Application APIs
+
+```
+POST /api/applications
+GET /api/applications
+GET /api/applications/my
+```
+
+---
+
+### 🏨 Allocation APIs
+
+```
+POST /api/allocations
+GET /api/allocations
+GET /api/allocations/my
+PUT /api/allocations/request-cancellation
+PUT /api/allocations/approve-cancellation/:id
+DELETE /api/allocations/:id
+```
+
+---
+
+# ⭐ Total APIs in Your System
+
+```
+Authentication   → 2
+Hostels          → 5
+Rooms            → 5
+Applications     → 3
+Allocations      → 6
+-----------------------
+TOTAL            → 21 APIs
+```
+
+This is actually **a very good backend size for a university project**.
+
+---
+
+# 🎓 How to Explain This in Your Viva
+
+You can say:
+
+> “The UniNest backend provides **21 RESTful APIs** covering authentication, hostel management, room management, student applications, and allocation workflows. Role-based access control is implemented using JWT authentication with middleware for admin and student authorization.”
+
+---
+
+✅ If you want, I can also give you **3 very useful diagrams for your project**:
+
+1️⃣ **UniNest System Architecture Diagram**
+2️⃣ **Database ER Diagram**
+3️⃣ **Use Case Diagram (Student + Admin)**
+
+These **increase project marks a lot** because lecturers love diagrams.

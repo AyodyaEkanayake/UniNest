@@ -5,7 +5,9 @@ const Allocation = require("../models/Allocation");
 // STUDENT APPLY
 exports.applyHostel = async (req, res) => {
   try {
-    const { student, hostel } = req.body;
+
+    const student = req.user.id;   // 🔥 get logged-in student
+    const { hostel } = req.body;
 
     // 🛑 Check if student already has allocation
     const existingAllocation = await Allocation.findOne({ student });
@@ -28,9 +30,15 @@ exports.applyHostel = async (req, res) => {
       });
     }
 
-    const application = await Application.create({ student, hostel });
+    const application = await Application.create({
+      student,
+      hostel
+    });
 
-    res.status(201).json(application);
+    res.status(201).json({
+      message: "Application submitted",
+      application
+    });
 
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -50,6 +58,7 @@ exports.getApplications = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+
 
 
 // ADMIN — APPROVE APPLICATION
@@ -123,7 +132,6 @@ exports.approveApplication = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
-
 
 // ADMIN — REJECT APPLICATION
 exports.rejectApplication = async (req, res) => {
